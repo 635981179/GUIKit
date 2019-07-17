@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProjectsController">
+   <children>
+       <TextField fx:id="name" layoutX="284.0" layoutY="14.0" prefHeight="27.0" prefWidth="157.0" promptText="项目或供应商名称" />
+       <DatePicker fx:id="startTime" layoutX="8.0" layoutY="14.0" prefHeight="30.0" prefWidth="126.0" promptText="开始时间" />
+       <DatePicker fx:id="endTime" layoutX="142.0" layoutY="14.0" prefHeight="30.0" prefWidth="120.0" promptText="结束时间" />
+       <Button layoutX="454.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#reset" text="重置" />
+      <TableView fx:id="tview" layoutY="46.0" prefHeight="308.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="64.0" text="id" />
+          <TableColumn fx:id="colXmmc" prefWidth="198.0" text="项目名称" />
+            <TableColumn fx:id="colStartTime" prefWidth="118.0" text="开始日期" />
+            <TableColumn fx:id="colProvider" prefWidth="166.0" text="供应商" />
+        </columns>
+         <tooltip>
+            <Tooltip text="Empty Tooltip" />
+         </tooltip>
+      </TableView>
+       <Pagination fx:id="pagi" layoutX="192.0" layoutY="349.0" prefHeight="20.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

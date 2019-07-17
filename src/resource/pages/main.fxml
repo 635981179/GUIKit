@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IndexController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="59.0" style="-fx-background-color: #FFDAB9;">
+         <children>
+            <Pane fx:id="paneSettings" layoutX="1.0" layoutY="330.0" onMouseClicked="#settings" prefHeight="66.0" prefWidth="66.0">
+               <children>
+                  <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="8.0" layoutY="7.0">
+                     <image>
+                        <Image url="@../img/tips_settings.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="12.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="设置" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneInfos" layoutX="1.0" layoutY="1.0" onMouseClicked="#infos" prefHeight="66.0" prefWidth="66.0">
+               <children>
+                  <Text layoutX="12.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="说明" />
+                  <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="8.0" layoutY="7.0">
+                     <image>
+                        <Image url="@../img/info.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="paneProjects" layoutY="63.0" onMouseClicked="#projects" prefHeight="66.0" prefWidth="66.0">
+               <children>
+                  <Text layoutX="16.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="项目" />
+                  <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="11.0" layoutY="12.0">
+                     <image>
+                        <Image url="@../img/edit-tools.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <SubScene fx:id="subScene" fill="#e8e8e8" height="400.0" layoutX="59.0" width="590.0">
+        <root>
+          <Region />
+        </root>
+      </SubScene>
+      <Pane layoutX="572.0" prefHeight="29.0" prefWidth="81.0">
+         <children>
+            <ImageView fitHeight="56.0" fitWidth="30.0" layoutX="5.0" layoutY="1.0" onMouseClicked="#minsize" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/minsize.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="23.0" layoutX="50.0" layoutY="7.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/close.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+   </children>
+</Pane>
