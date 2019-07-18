@@ -57,8 +57,8 @@ public class UpdateTask implements Runnable {
     private EnterpriseSccDao enterpriseSccDao = new EnterpriseSccDao();
     private ProjectProviderDao projectProviderDao = new ProjectProviderDao();
 
-    private final String urlWithoutParams = "http://218.4.84.171:5445/AppGiantHopeSzSq/GiantHopePage/Module_ViewInfo/ProjecteInfo_View.aspx?ProjectID=";
-    private final String projectPrintUrl = "http://218.4.84.171:5445/AppGiantHopeSzSq/GiantHopePage/Module_Project/Project_Other_Machine_Edit.aspx?ProjectID=";
+    private final String urlWithoutParams = "";
+    private final String projectPrintUrl = "";
 
     public Boolean isRunning(){
         return running;
@@ -266,7 +266,7 @@ public class UpdateTask implements Runnable {
     }
 
     public boolean ifRelated(String scc, String sjzw) throws IOException, DocumentException {
-        HttpPost post = new HttpPost("http://218.4.84.171:8060/AppWebService/GHBackBone_DataDocking.asmx");
+        HttpPost post = new HttpPost("http://*.*.*.*:8060/AppWebService/GHBackBone_DataDocking.asmx");
         post.setHeader("Content-Type", "application/soap+xml; charset=utf-8");
         post.setHeader("Accept", "application/soap+xml, multipart/related");
         StringBuilder sb = new StringBuilder();
@@ -274,9 +274,9 @@ public class UpdateTask implements Runnable {
                 .append("<env:Envelope xmlns:env=\"http://www.w3.org/2003/05/soap-envelope\">")
                 .append("<env:Header></env:Header>")
                 .append("<env:Body>")
-                .append("<q0:GetProject xmlns:q0=\"http://218.4.84.171:5445/\">")
-                .append("<dataNumber xmlns=\"http://218.4.84.171:5445/\">"+sjzw+"</dataNumber>")
-                .append("<bagsBH xmlns=\"http://218.4.84.171:5445/\">"+scc+"</bagsBH>")
+                .append("<q0:GetProject xmlns:q0=\"http://*.*.*.*:5445/\">")
+                .append("<dataNumber xmlns=\"http://*.*.*.*/\">"+sjzw+"</dataNumber>")
+                .append("<bagsBH xmlns=\"http://*.*.*.*:5445/\">"+scc+"</bagsBH>")
                 .append("</q0:GetProject>")
                 .append("</env:Body>")
                 .append("</env:Envelope>");
