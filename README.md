@@ -19,3 +19,12 @@
 ## 功能
 - table展示项目信息
 - 可以爬取信息发布网站更新项目信息
+## demo
+![结构](https://github.com/635981179/GUIKit/blob/master/2.png)
+![结构](https://github.com/635981179/GUIKit/blob/master/3.png)
+![结构](https://github.com/635981179/GUIKit/blob/master/4.png)
+![结构](https://github.com/635981179/GUIKit/blob/master/5.png)
+## 小结
+因为javafx社区不太活跃的缘故，没有很深入的使用。简单的完成了项目信息抓取、展示、搜索条件之后就不在修改了。
+这种MVC设计模式 和 多线程的开发 还有 使用了原生的jdbc而不是mybatis 还是让我受益匪浅。
+总而言之，这不是从少到多的给框架填代码，是从无到有的开发。
