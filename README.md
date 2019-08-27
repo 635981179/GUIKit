@@ -15,6 +15,7 @@
 - utils DateUtils 和 StringUtils封装了两个类的静态方法 JdbcUtils应该不陌生 里面会加载驱动 封装getConnection 和 release
 - resource img存放页面要用的png pages内是fxml格式的 页面 和 html差不多 也可以加一些样式 这里只做了简单的颜色 和排版
 - set.ini 存放数据库连接配置
+![结构](https://github.com/635981179/GUIKit/blob/master/1.png)
 ## 功能
 - table展示项目信息
 - 可以爬取信息发布网站更新项目信息
